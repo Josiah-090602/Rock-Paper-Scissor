@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <script defer src="/script.js"></script>
+</head>
+<body>
+
+    <div id="home-container">
+        <h1>ROCK-PAPER-SCISSOR</h1>
+
+
+        <div class="images-con">
+            <img class="icons" src="/img/rock.png" alt="">
+            <img class="icons" src="/img/paper.png" alt="">
+            <img class="icons" src="/img/scissor.png" alt="">
+        </div>
+
+        <button id="play-game">Play Game</button>
+    </div>
+    
+    <div id="game-container">
+        <div id="output">RESULT</div>
+        <div id="computer-select">Rock</div>
+        <div id="player-select">Paper</dv>
+        
+
+        <div class="scores-con">
+            <div class="score">
+                <img src="/img/Player.png" alt="">
+                <span id="pl-score">0</span>
+               
+            </div>
+            <div class="score">
+                <span id="com-score">0</span>
+                 <img src="/img/Bot.png" alt="">
+            </div>
+        </div>
+        
+
+        <div class="buttons">
+            <button class="choices" choice-data="rock"><img src="/img/rock.png" alt=""></button>
+            <button class="choices" choice-data="paper"><img src="/img/paper.png" alt=""></button>
+            <button class="choices" choice-data="scissor"><img src="/img/scissor.png" alt=""></button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:root{
+    --red-color : #FF004D;
+    --yellow-color : #FAEF5D;
+    --blue-color : #4942E4;
+    --bg-color: rgb(29, 43, 83);
+    --white: rgb(248, 244, 236);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+#home-container, #game-container{
+    border: #F8F4EC solid 1px;
+    width: 80rem;
+    height: 40rem;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+#home-container{
+    gap: 3rem;
+}
+
+
+#home-container h1{
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.images-con, .buttons{
+    display: flex;
+    gap: 5rem;
+    padding: 10px;
+}
+
+.images-con .icons{
+    width: 150px;
+    border-radius: 100px;
+    box-shadow: 0 0 0 10px rgb(248, 244, 236);
+}
+
+.choices{
+    height: 150px;
+    width: 150px ;
+    border-radius: 100px;
+    box-shadow: 0 0 0 10px rgb(248, 244, 236);
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.choices > img{
+    width: 150px;
+}
+
+
+#play-game{
+    border-radius: 10px;
+    height: 3rem;
+    font-size: 1.4rem;
+    width: 10rem;
+    font-weight: 600;
+    background-color: #FF004D;
+    color: var(--white);
+    border: none;
+}
+
+#game-container{
+    display: none;
+    position: relative;
+}
+
+.scores-con{
+    position: absolute;
+    border: 1px solid white;
+    width: 100%;
+    left: 0;
+    padding: 0 60px 0 60px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 50px;
+}
+.score {
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 175px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    gap: 2rem;
+    background-color: white;
+}
+
+.score:last-child{
+    justify-content: end;
+}
+
+.score img {
+    background-color: rgb(180, 212, 255);
+    width: 5rem;
+    border-radius: 20px;
+}
+
