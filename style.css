@@ -11,7 +11,7 @@
 :root{
     --red-color : #FF004D;
     --yellow-color : #FAEF5D;
-    --blue-color : #4942E4;
+    --blue-color : rgb(73, 66, 228);
     --bg-color: rgb(29, 43, 83);
     --white: rgb(248, 244, 236);
 }
@@ -59,6 +59,7 @@ body{
     overflow: hidden;
     border: none;
     cursor: pointer;
+    transition: all 600ms;
 }
 
 .choices > img{
@@ -89,12 +90,29 @@ body{
 #game-container > h1, #output{
     color: var(--white);
 }
+#game-container .title{
+    font-size: 3rem;
+    position: absolute;
+    top: 60px;
+    transition: ease-in-out 600ms;
+}
 
-#output{font-size: 1.5rem;}
+#output{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    background-color: rgb(182, 187, 196, 0.2);
+    width: 200px;
+    height: 3rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid rgb(182, 187, 196);
+    transition: all 800ms;
+}
 
 .scores-con{
     position: absolute;
-    border: 1px solid white;
     width: 100%;
     left: 0;
     padding: 0 60px 0 60px;
@@ -136,5 +154,13 @@ body{
 
 .hide{
     opacity: 0;
+}
+
+.in-game{
+    font-size: 2.5rem !important;
+}
+
+.choices.in-game{
+    transform: scale(1.1);
 }
 
