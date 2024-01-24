@@ -9,7 +9,8 @@ const computerScore = document.getElementById("com-score")
 const playerScore = document.getElementById("pl-score")
 const postGame = document.getElementById("post-game")
 const gameDescission = document.getElementById("descission")
-
+const computerContainer = document.getElementById("computer-con")
+const playerContainer = document.getElementById("player-con")
 
 
 let cScore = 0
@@ -58,24 +59,27 @@ const comChoice  = () =>{
 
 //Check Round Winner
 const roundWinner = (computer, player) =>{
+    
     if (computer === "rock" && player === "scissor" ||
         computer === "scissor" && player === "paper" ||
         computer === "paper" && player === "rock"){
-
             result.textContent = "You Lose!"
             result.style.backgroundColor = "rgb(250, 112, 112, 0.2)"
             cScore++
-
+            computerContainer.style.backgroundColor = "rgb(161, 238, 189)"
+            playerContainer.style.backgroundColor = "rgb(250, 112, 112)"
     } else if (computer === player) {
-
             result.textContent = "Draw"
             result.style.backgroundColor = "rgb(182, 187, 196, 0.2)"
+            computerContainer.style.backgroundColor = "rgb(182, 187, 196, 0.8)"
+            playerContainer.style.backgroundColor = "rgb(182, 187, 196, 0.8)"
 
     } else {
-
             result.textContent = "You Win!"
             result.style.backgroundColor = "rgb(161, 238, 189, 0.2)"
             pScore++
+            playerContainer.style.backgroundColor = "rgb(161, 238, 189)"
+            computerContainer.style.backgroundColor = "rgb(250, 112, 112)"
     }
 }
 
@@ -115,6 +119,8 @@ const resetGame = () => {
     playerScore.textContent = pScore
     computerScore.textContent = cScore
     result.textContent = "Round Winner"
+    computerSelect.src = `/img/default.png`
+    playerSelect.src = `/img/default.png`
 
     selectionButtons.forEach(button => {
         button.disabled = false

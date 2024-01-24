@@ -94,7 +94,7 @@ body{
 #game-container .title{
     font-size: 3rem;
     position: absolute;
-    top: 60px;
+    top: 150px;
     transition: ease-in-out 600ms;
 }
 
@@ -155,12 +155,17 @@ body{
     border-radius: 20px;
 }
 
+#player-select, #computer-select{
+    border-radius: 100px;
+}
+
 .hide{
     opacity: 0;
 }
 
-.in-game{
-    font-size: 2.5rem !important;
+.title.in-game{
+    font-size: 4rem !important;
+    top: 50px !important;
 }
 
 .choices.in-game{
@@ -214,6 +219,7 @@ body{
     opacity: 1;
     overflow: hidden;
 }
+
 
 
 
