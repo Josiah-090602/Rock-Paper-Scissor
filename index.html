@@ -14,34 +14,47 @@
 
     <div id="game-container">
         <h1 id="game-title" class="title">ROCK - PAPER - SCISSORS</h1>
-        <div id="output" class="hide">RESULT</div>
        
-        
-        
+        <div id="output" class="hide">Round Winner</div>
 
-        <div class="scores-con hide">
-            <div class="score">
-                <img src="/img/Player.png" alt="">
-                <span id="pl-score">0</span>
-                <img id="player-select" src="/img/rock.png" class="hide">
-            </div>
-            <div class="score">
-                <img id="computer-select" src="/img/paper.png" class="hide">
-                <span id="com-score">0</span>
-                 <img src="/img/Bot.png" alt="">
-            </div>
-        </div>
-
-
-        
         <div class="buttons">
             <button class="choices" choice-data="rock"><img src="/img/rock.png" alt=""></button>
             <button class="choices" choice-data="paper"><img src="/img/paper.png" alt=""></button>
             <button class="choices" choice-data="scissor"><img src="/img/scissor.png" alt=""></button>
         </div>
         
+        
         <button id="play-game">Play Game</button>
 
+        <div class="scores-con hide">
+            <div class="score-wrapper">
+            <div class="score">
+                <img src="/img/Player.png" alt="">
+                <span id="pl-score"></span>
+            </div>
+            <img id="player-select" src="/img/rock.png" class="hide">
+            </div>
+
+            <div class="score-wrapper">
+            <img id="computer-select" src="/img/paper.png" class="hide">
+            <div class="score">
+                
+                <span id="com-score"></span>
+                <img src="/img/Bot.png" alt="">
+            </div>
+            </div>
+
+
+            
+        </div>
+
+        <!-- Modal for Winner or Loser -->
+            
+    </div>
+
+    <div id="post-game" class="">
+        <span id="descission">DESCISSION</span>
+        <button id="play-again">Play Again</button>
     </div>
 
 </body>

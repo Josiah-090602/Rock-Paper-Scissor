@@ -14,6 +14,9 @@
     --blue-color : rgb(73, 66, 228);
     --bg-color: rgb(29, 43, 83);
     --white: rgb(248, 244, 236);
+    --trasition200: ease-in-out 200ms;
+    --transition900: ease-in-out 900ms;
+    --transition600: ease-in-out 600ms;;
 }
 
 body{
@@ -21,21 +24,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color);
+    background-color: #0F1035; position: relative;
 }
 
 
 #game-container{
     border: #F8F4EC solid 1px;
     width: 80rem;
-    height: 40rem;
+    height: 45rem;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     flex-direction: column;
-    gap: 10px;
+    position: relative;
+    gap: 30px;
+    background-color: var(--bg-color);
 }
 
 
@@ -64,27 +69,23 @@ body{
 
 .choices > img{
     width: 150px;
+    transition: var(--trasition200);
 }
 
 
-#play-game{
+#play-game, #play-again{
     border-radius: 10px;
-    height: 3rem;
+    height: 3.6rem;
     font-size: 1.4rem;
-    width: 10rem;
+    width: 12rem;
     font-weight: 600;
     background-color: #FF004D;
     color: var(--white);
     border: none;
     cursor: pointer;
     z-index: 2;
-    transition: ease-in-out 200ms;
-}
-
-#game-container{
-    display: flex;
-    position: relative;
-    gap: 30px;
+    transition: var(--trasition200);
+    margin-top: 20px;
 }
 
 #game-container > h1, #output{
@@ -99,7 +100,7 @@ body{
 
 #output{
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
     background-color: rgb(182, 187, 196, 0.2);
     width: 200px;
     height: 3rem;
@@ -108,7 +109,7 @@ body{
     align-items: center;
     border-radius: 10px;
     border: 2px solid rgb(182, 187, 196);
-    transition: all 800ms;
+    transition: var(--transition900);
 }
 
 .scores-con{
@@ -120,15 +121,10 @@ body{
     justify-content: space-between;
     bottom: 50px;
     opacity: 1;
-    transition: ease-in-out 900ms;
+    transition: var(--transition900);
+    align-items: center;
 }
 
-#computer-select{
-    margin-right: 10px;
-}
-#player-select{
-    margin-left: 10px;
-}
 
 .score {
     border-radius: 20px;
@@ -146,9 +142,16 @@ body{
     justify-content: end;
 }
 
-.score img {
+.score-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scores-con img {
     background-color: rgb(180, 212, 255);
     width: 5rem;
+    height: 5rem;
     border-radius: 20px;
 }
 
@@ -163,4 +166,55 @@ body{
 .choices.in-game{
     transform: scale(1.1);
 }
+
+.choices:hover img{
+    filter: brightness(60%);
+}
+
+#post-game{
+    opacity: 0;
+    height:40%;
+    border: 1px solid white;
+    width: 40%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 30px;
+    color: white;
+}
+
+#post-game span{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#post-game{
+    height:40%;
+    border: 1px solid white;
+    width: 40%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 30px;
+    color: white;
+    transition: var(--transition600);
+    z-index: -1;
+    gap: 1rem;
+}
+
+#post-game.show{
+    z-index: 2;
+    opacity: 1;
+    overflow: hidden;
+}
+
+
+
 
