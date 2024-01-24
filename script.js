@@ -4,7 +4,13 @@ const homeState = document.getElementById("home-container")
 
 //Play Function
 playButton.addEventListener("click", ()=>{
-    homeState.style.display = "none"
-    gameState.style.display = "flex"
+    let hiddenItems = document.querySelectorAll(".hide")
+
+    hiddenItems.forEach(hidden => {
+        hidden.classList.remove("hide")
+    })
+
+    playButton.classList.add("hide")
+
 })
 

@@ -24,7 +24,8 @@ body{
     background-color: var(--bg-color);
 }
 
-#home-container, #game-container{
+
+#game-container{
     border: #F8F4EC solid 1px;
     width: 80rem;
     height: 40rem;
@@ -34,17 +35,9 @@ body{
     align-items: center;
     padding: 10px;
     flex-direction: column;
+    gap: 10px;
 }
 
-#home-container{
-    gap: 3rem;
-}
-
-
-#home-container h1{
-    color: var(--white);
-    font-size: 2.5rem;
-}
 
 .images-con, .buttons{
     display: flex;
@@ -82,12 +75,22 @@ body{
     background-color: #FF004D;
     color: var(--white);
     border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: ease-in-out 200ms;
 }
 
 #game-container{
-    display: none;
+    display: flex;
     position: relative;
+    gap: 30px;
 }
+
+#game-container > h1, #output{
+    color: var(--white);
+}
+
+#output{font-size: 1.5rem;}
 
 .scores-con{
     position: absolute;
@@ -98,7 +101,17 @@ body{
     display: flex;
     justify-content: space-between;
     bottom: 50px;
+    opacity: 1;
+    transition: ease-in-out 900ms;
 }
+
+#computer-select{
+    margin-right: 10px;
+}
+#player-select{
+    margin-left: 10px;
+}
+
 .score {
     border-radius: 20px;
     display: flex;
@@ -119,5 +132,9 @@ body{
     background-color: rgb(180, 212, 255);
     width: 5rem;
     border-radius: 20px;
+}
+
+.hide{
+    opacity: 0;
 }
 

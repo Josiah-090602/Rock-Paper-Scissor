@@ -10,43 +10,39 @@
 </head>
 <body>
 
-    <div id="home-container">
-        <h1>ROCK-PAPER-SCISSOR</h1>
 
-
-        <div class="images-con">
-            <img class="icons" src="/img/rock.png" alt="">
-            <img class="icons" src="/img/paper.png" alt="">
-            <img class="icons" src="/img/scissor.png" alt="">
-        </div>
-
-        <button id="play-game">Play Game</button>
-    </div>
-    
-    <div id="game-container">
-        <div id="output">RESULT</div>
-        <div id="computer-select">Rock</div>
-        <div id="player-select">Paper</dv>
         
 
-        <div class="scores-con">
+    <div id="game-container">
+        <h1>ROCK - PAPER - SCISSORS</h1>
+        <div id="output" class="hide">RESULT</div>
+       
+        
+        
+
+        <div class="scores-con hide">
             <div class="score">
                 <img src="/img/Player.png" alt="">
                 <span id="pl-score">0</span>
-               
+                <img id="player-select" src="/img/paper.png" class="hide">
             </div>
             <div class="score">
+                <img id="computer-select" src="/img/rock.png" class="hide">
                 <span id="com-score">0</span>
                  <img src="/img/Bot.png" alt="">
             </div>
         </div>
-        
 
+
+        
         <div class="buttons">
             <button class="choices" choice-data="rock"><img src="/img/rock.png" alt=""></button>
             <button class="choices" choice-data="paper"><img src="/img/paper.png" alt=""></button>
             <button class="choices" choice-data="scissor"><img src="/img/scissor.png" alt=""></button>
         </div>
+        
+        <button id="play-game">Play Game</button>
+
     </div>
 
 </body>
